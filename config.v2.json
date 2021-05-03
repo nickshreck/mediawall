@@ -1,0 +1,17 @@
+{
+    "id": "1d73a8fa-65d7-489a-b352-2c2c1182b306",
+    "type": "widgets",
+    "path": "widgets/1d73a8fa-65d7-489a-b352-2c2c1182b306",
+    "region": "eu",
+    "customer_id": "299979fc-69b5-4a40-bdb8-c179b06ab8e4",
+    "user_id": "a451da47-689d-41f4-b7cb-d5f6095e1f2c",
+    "scope": {
+        "customers": [
+            "299979fc-69b5-4a40-bdb8-c179b06ab8e4"
+        ],
+        "users": [],
+        "partners": [],
+        "global": false
+    },
+    "udpated_at": "2021-04-27T20:59:12.228Z"
+}

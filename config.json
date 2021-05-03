@@ -1,0 +1,35 @@
+{
+    "region": "bicycle",
+    "region_object": null,
+    "bicycle": {
+        "app_json": {
+            "description": "",
+            "id": "mediawall",
+            "name": "",
+            "origin": "eu",
+            "distribution": [
+                "eu"
+            ]
+        },
+        "widget_json": {
+            "id": "mediawall",
+            "description": "",
+            "dynamic_schema": {},
+            "icon": "html",
+            "minx": 4,
+            "miny": 4,
+            "mp_bucket_name": "",
+            "sizex": 7,
+            "sizey": 7,
+            "tag_ids": [],
+            "title": "",
+            "translations": {
+                "en": {
+                    "description": "",
+                    "title": ""
+                }
+            },
+            "use_public_bucket": true
+        }
+    }
+}
