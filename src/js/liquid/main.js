@@ -19,7 +19,7 @@ let timeline = {};
 
 // Page Functions
 
-function loadPage(page=false) {
+function loadPage(page=false, data=false) {
 
     if(!page){
         return;
@@ -34,6 +34,8 @@ function loadPage(page=false) {
     console.log("loadPage", page, "---", pages.previous, pages.current, this);
 
     // loadStyle(page);
+
+    Project.Data.setData(data.data);
 
     timeline = Project.Pages[pages.current].timeline;
 
@@ -67,7 +69,7 @@ async function loadTemplate(templateFile, div, callback) {
     let response = await fetch(template);
     let html = await response.text()
 
-    let rendered = Mustache.render(html, data);
+    let rendered = Mustache.render(html, Project.Data.data);
 
     console.log("loadTemplate", template, div, callback);
 

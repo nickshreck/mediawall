@@ -29,7 +29,7 @@ function anims(step, data=null){
     switch(step){
 
         case 'load-page':
-            Liquid.loadTemplate(Liquid.pages.current + '.html', 'page-content', null);
+            Liquid.loadTemplate(Liquid.pages.current + '.html', 'liquid-container', null);
             break;
 
     }

@@ -3,7 +3,7 @@ import * as Liquid from '../../liquid/main.js'
 
 // Project Imports:
 import * as Pages from './pages.js'
-
+import * as Data from './data.js'
 
 // Util Imports:
 import $ from "jquery";
@@ -236,4 +236,4 @@ function initPauseButton() {
     });
 }
 
-export { Pages, initPauseButton, pageTemplate, loadVideo, setLines, waitForVideo, locations }
+export { Pages, Data, initPauseButton, pageTemplate, loadVideo, setLines, waitForVideo, locations }

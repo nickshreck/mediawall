@@ -1,7 +1,7 @@
 // MediaWall Import
 import * as MediaWall from '../main.js'
 
-let socket = new WebSocket("ws://localhost:443");
+let socket = new WebSocket("ws://localhost:6969");
 
 socket.onopen = function (event) {
     send({ nick: 'nick is cool', redigan: 'redigan is cool too'});
@@ -17,7 +17,7 @@ function receive(data){
 
     console.log(data);
 
-    MediaWall.loadPage(data.page);
+    MediaWall.loadPage(data.page, data);
 
 }
 

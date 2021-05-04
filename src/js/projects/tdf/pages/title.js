@@ -30,6 +30,7 @@ function anims(step, data=null){
 
         case 'load-page':
             Liquid.loadTemplate(Liquid.pages.current + '.html', 'liquid-container', null);
+            console.log('Title Page', Data.data)
             break;
 
     }

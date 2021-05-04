@@ -10,5 +10,11 @@ function getData(type) {
 
 }
 
+function setData(datax){
 
-export { data, getData }
+    data = datax;
+
+}
+
+
+export { data, getData, setData }
