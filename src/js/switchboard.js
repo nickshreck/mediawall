@@ -1,4 +1,3 @@
-import * as API from './utils/api.js';
 import * as Director from './director.js';
 
 function send(message){

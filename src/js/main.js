@@ -1,37 +1,45 @@
 // Liquid Import:
-import * as Liquid from '../../../liquid/src/js/liquid/main.js'
+import * as Liquid from '../../../liquid/src/js/main.js'
+
+// Project Import:
+import * as Project from '../../../tdf/src/js/project.js'
+
 
 import * as Oracle from '../../../oracle/src/js/main.js'
 
 import * as Socket from './utils/socket.js';
 
-// import '../../../liquid/static/projects/tdf/styles/project.scss'
+import { instruct } from '../../../titan/src/js/main'
 
+import { animateToGroup } from '../../../carousel/src/js/main'
+
+import { zoomTo } from '../../../elevation/src/js/main'
+
+Liquid.init(Project);
 Liquid.loadPage("main");
 
 function loadPage(page, data){
 
-    switch(page){
-
-        case ('title'):
-            Liquid.loadPage('title', data)
-            break;
-
-        case ('podium'):
-            Liquid.loadPage('podium', data)
-            break;
-
-        case ('riderprofile'):
-            Liquid.loadPage('riderprofile', data)
-            break;
-    
-
-        default:
-            break;
-            
-    }
-
+    Liquid.loadPage(page, data)
 
 }
 
-export { loadPage }
+function titan(data){
+
+    instruct(data.camera);
+
+}
+
+function elevation(data){
+
+    zoomTo(data);
+
+}
+
+function carousel(data){
+
+    animateToGroup(data.count, data.time);
+
+}
+
+export { loadPage, titan, elevation, carousel }
