@@ -1,13 +1,23 @@
 // MediaWall Import
 import * as MediaWall from '../main.js'
 
-// let socket = new WebSocket("wss://connect.ntt.media/websocket/");
+let socket;
 
-let socket = new WebSocket("ws://localhost:6969/");
+function connect(){
 
-socket.onopen = function (event) {
-    // send({ nick: 'nick is cool', redigan: 'redigan is cool too'});
-};
+    socket = new WebSocket(MediaWall.settings.websocket);
+
+    socket.onopen = function (event) {
+        send({ mediawall: 'connected' });
+    };
+
+    socket.onmessage = function (event) {
+
+        receive(JSON.parse(event.data));
+    
+    }
+
+}
 
 function send(data){
 
@@ -31,10 +41,4 @@ function receive(data){
 
 }
 
-socket.onmessage = function (event) {
-
-    receive(JSON.parse(event.data));
-
-}
-
-export { send }
+export { connect, send }
